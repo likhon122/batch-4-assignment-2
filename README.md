@@ -1,6 +1,6 @@
 # Car Web API (Assignment 2)
 
-This is a car management and order processing web API built using TypeScript, Express.js, and MongoDB. It provides functionality for managing cars and processing orders. The API follows a RESTful architecture with routes prefixed with `/api`.
+This is a car management and order processing web API built using TypeScript, Express.js, and MongoDB. It provides functionality for managing cars and processing orders. The API follows a RESTful architecture with routes prefixed `/api`.
 
 ## Features
 
@@ -23,46 +23,52 @@ This is a car management and order processing web API built using TypeScript, Ex
 1. Clone the repository.
 2. Navigate into the project directory `cd batch-4-assignment-2`
 3. Install the required dependencies using `npm install`.
-4. Set up environment variables in a `.env` file:
+
+4. Run Locally
+
+```bash
+npm run dev
+```
+
+5. Build Project
+
+```bash
+npm run build
+```
+
+Alternatively, for development mode with live reloading, use npm run dev.
+
+## ENV Variables
+
+1. Set up environment variables in a `.env` file:
 
 ```env
 MONGODB_URL=mongodb://localhost:27017/assignment-2
 PORT=3000
 ```
 
-5. Run Locally
-
-```bash
-npm run dev
-```
-
-6. Build Project
-
-```bash
-npm run build
-```
-Alternatively, for development mode with live reloading, use npm run dev.
-Environment Variables
-The following environment variables are required for the application to run:
-
-MONGODB_URL: The URL for your MongoDB instance.
-PORT: The port the server will run on (default is 3000).
-
+- Environment Variables
+  The following environment variables are required for the application to run:
+  - PORT: The port the server will run on (default is 3000).
+  - MONGODB_URL: The URL for your MongoDB instance.
 
 ## API Documentation
 
-1. Car Routes (/api/cars)
-  Create a new car
-    Endpoint: POST /api/cars
-Request Body:
-json
-Copy code
+### Car Routes (/api/cars)
+
+1. Create a new car
+   - Endpoint: POST /api/cars
+     Request Body:
+
+```json
 {
-"make": "Toyota",
-"model": "Corolla",
-"year": 2020,
-"price": 20000
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 2020,
+  "price": 20000
 }
+```
+
 Get all cars
 Endpoint: GET /api/cars
 Response:
