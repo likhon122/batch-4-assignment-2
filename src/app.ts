@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import { port } from "./app/config";
@@ -38,7 +39,7 @@ app.all("*", (req: Request, res: Response) => {
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   // Handle ZodError (validation error)
   if (err instanceof ZodError) {
-    const zodErrors = err.errors.map((e) => ({
+    const zodErrors = err.errors.map((e: any) => ({
       path: e.path.join("."),
       message: e.message
     }));
