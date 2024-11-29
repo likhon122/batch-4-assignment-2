@@ -56,38 +56,40 @@ PORT=3000
 
 1.  Create a new car
 
-    - Endpoint: (POST) /api/cars - Request Body:
-
+    - Endpoint: (POST) /api/cars
+           - Request Body:
+      
       ```json
-      {
-        "make": "Toyota",
-        "model": "Corolla",
-        "year": 2020,
-        "price": 20000
-      }
+      
+             {
+               "make": "Toyota",
+               "model": "Corolla",
+               "year": 2020,
+               "price": 20000
+             }
+    
       ```
-
       - Response:
-
       ```json
-      {
-        "message": "Car created Successfully",
-        "success": true,
-        "data": {
-          "brand": "Toyota",
-          "model": "Camry",
-          "year": 2024,
-          "price": 25000,
-          "category": "Sedan",
-          "description": "A reliable family sedan with modern features.",
-          "quantity": 0,
-          "inStock": false,
-          "_id": "6749829e7b85c724cfb23c67",
-          "createdAt": "2024-11-29T09:00:14.876Z",
-          "updatedAt": "2024-11-29T09:00:14.876Z",
-          "__v": 0
-        }
-      }
+           {
+              "message": "Car created Successfully",
+              "success": true,
+              "data": {
+                "brand": "Toyota",
+                "model": "Camry",
+                "year": 2024,
+                "price": 25000,
+                "category": "Sedan",
+                "description": "A reliable family sedan with modern features.",
+                "quantity": 0,
+                "inStock": false,
+                "_id": "6749829e7b85c724cfb23c67",
+                "createdAt": "2024-11-29T09:00:14.876Z",
+                "updatedAt": "2024-11-29T09:00:14.876Z",
+                "__v": 0
+              }
+            }
+
       ```
 
 2.  Get all cars
@@ -121,30 +123,31 @@ PORT=3000
 
 3.  Get a single car by ID
 
-- Endpoint: GET /api/cars/:carId
+   - Endpoint: GET /api/cars/:carId
+       - Response:
 
-  - Response:
-
-    ```json
-    {
-      "message": "Car retrieved successfully",
-      "success": true,
-      "data": {
-        "_id": "6748599ca6a54826b7d696b5",
-        "brand": "Toyota",
-        "model": "Camry",
-        "year": 2024,
-        "price": 25000,
-        "category": "Sedan",
-        "description": "A reliable family sedan with modern features.",
-        "quantity": 50,
-        "inStock": true,
-        "createdAt": "2024-11-28T11:53:00.573Z",
-        "updatedAt": "2024-11-28T11:53:00.573Z",
-        "__v": 0
-      }
-    }
-    ```
+         ```json
+              {
+                "message": "Car retrieved successfully",
+                "success": true,
+                "data": {
+                    "_id": "6748599ca6a54826b7d696b5",
+                    "brand": "Toyota",
+                    "model": "Camry",
+                    "year": 2024,
+                    "price": 25000,
+                    "category": "Sedan",
+                    "description": "A reliable family sedan with modern features.",
+                    "quantity": 50,
+                    "inStock": true,
+                    "createdAt": "2024-11-28T11:53:00.573Z",
+                    "updatedAt": "2024-11-28T11:53:00.573Z",
+                    "__v": 0
+                }
+    
+                }
+    
+          ```
 
 4.  Update a car by ID
 
