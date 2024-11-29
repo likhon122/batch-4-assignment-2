@@ -38,13 +38,13 @@ npm run build
 
 Alternatively, for development mode with live reloading, use npm run dev.
 
-## ENV Variables
+## Environment-Variables
 
 1. Set up environment variables in a `.env` file:
 
 ```env
-MONGODB_URL=mongodb://localhost:27017/assignment-2
 PORT=3000
+MONGODB_URL=mongodb://localhost:27017/assignment-2
 ```
 
 - Environment Variables
@@ -58,7 +58,7 @@ PORT=3000
 
 1. Create a new car
    - Endpoint: POST /api/cars
-     Request Body:
+  Request Body:
 
 ```json
 {
