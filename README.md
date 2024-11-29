@@ -15,7 +15,7 @@ This is a car management and order processing web API built using TypeScript, Ex
 - [API Documentation](#api-documentation)
   - [Car Routes](#car-routes)
   - [Order Routes](#order-routes)
-- [Running the Application](#running-the-application)
+- [Live Link](#live-link)
 - [Technologies](#technologies)
 
 ## Installation
@@ -57,103 +57,107 @@ PORT=3000
 ### Car Routes (/api/cars)
 
 1. Create a new car
+
    - Endpoint: (POST) /api/cars
 
-```json
-Request Body:
-{
-  "make": "Toyota",
-  "model": "Corolla",
-  "year": 2020,
-  "price": 20000
-}
-```
+     - Request Body:
 
-Get all cars
-Endpoint: GET /api/cars
-Response:
-json
-Copy code
-[
-{
-"id": "12345",
-"make": "Toyota",
-"model": "Corolla",
-"year": 2020,
-"price": 20000
-},
-...
-]
-Get a single car by ID
-Endpoint: GET /api/cars/:carId
-Response:
-json
-Copy code
-{
-"id": "12345",
-"make": "Toyota",
-"model": "Corolla",
-"year": 2020,
-"price": 20000
-}
-Update a car by ID
-Endpoint: PUT /api/cars/:carId
-Request Body:
-json
-Copy code
-{
-"make": "Toyota",
-"model": "Corolla",
-"year": 2021,
-"price": 22000
-}
-Delete a car by ID
-Endpoint: DELETE /api/cars/:carId
-Order Routes (/api/orders)
-Make an order
-Endpoint: POST /api/orders
-Request Body:
-json
-Copy code
-{
-"carId": "12345",
-"quantity": 1,
-"totalPrice": 20000
-}
-Get total revenue
-Endpoint: GET /api/orders/revenue
-Response:
-json
-Copy code
-{
-"revenue": 50000
-}
-Running the Application
-After setting up the project and environment variables, you can run the application using the following commands:
+     ```json
+     {
+       "make": "Toyota",
+       "model": "Corolla",
+       "year": 2020,
+       "price": 20000
+     }
+     ```
 
-Development mode (with live reloading):
+2. Get all cars
 
-bash
-Copy code
-npm run dev
-Production mode:
+   - Endpoint: GET /api/cars
 
-bash
-Copy code
-npm start
-The API will be available at http://localhost:3000.
+     - Response:
 
-Technologies
-Node.js: JavaScript runtime for building the application.
-Express.js: Web framework for building the RESTful API.
-TypeScript: Superset of JavaScript for static typing.
-MongoDB: NoSQL database for storing car and order information.
-ts-node-dev: Development tool for running TypeScript code with live reloading.
-TypeORM: ORM for interacting with the MongoDB database.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+     ```json
+     [
+       {
+         "id": "12345",
+         "make": "Toyota",
+         "model": "Corolla",
+         "year": 2020,
+         "price": 20000
+       }
+       // Rest of response
+     ]
+     ```
 
-vbnet
-Copy code
+3. Get a single car by ID
 
-This is your full `README.md` file containing all the required sections and information. Let me know i
+   - Endpoint: GET /api/cars/:carId
+
+     - Response:
+
+     ```json
+     {
+       "id": "12345",
+       "make": "Toyota",
+       "model": "Corolla",
+       "year": 2020,
+       "price": 20000
+     }
+     ```
+
+4. Update a car by ID
+
+   - Endpoint: PUT /api/cars/:carId
+
+     - Request Body:
+
+       ```json
+       {
+         "make": "Toyota",
+         "model": "Corolla",
+         "year": 2021,
+         "price": 22000
+       }
+       ```
+
+5. Delete a car by ID
+   - Endpoint: DELETE /api/cars/:carId
+
+### Order Routes (/api/orders)
+
+1. Make an order
+
+   - Endpoint: POST /api/orders
+
+     - Request Body:
+
+       ```json
+       {
+         "carId": "12345",
+         "quantity": 1,
+         "totalPrice": 20000
+       }
+       ```
+
+2. Get total revenue
+
+   - Endpoint: GET /api/orders/revenue
+     - Response:
+       ```json
+       {
+         "revenue": 50000
+       }
+       ```
+
+## Live-Link
+
+- ### Live - [Live Link](http://localhost:4000)
+
+## Technologies
+
+- Node.js: JavaScript runtime for building the application.
+- Express.js: Web framework for building the RESTful API.
+- TypeScript: Superset of JavaScript for static typing.
+- MongoDB: NoSQL database for storing car and order information.
+- ts-node-dev: Development tool for running TypeScript code with live reloading.
