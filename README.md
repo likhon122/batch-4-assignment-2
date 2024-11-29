@@ -43,8 +43,8 @@ Alternatively, for development mode with live reloading, use npm run dev.
 1. Set up environment variables in a `.env` file:
 
 ```env
-PORT=3000
 MONGODB_URL=mongodb://localhost:27017/assignment-2
+PORT=3000
 ```
 
 - Environment Variables
@@ -57,10 +57,10 @@ MONGODB_URL=mongodb://localhost:27017/assignment-2
 ### Car Routes (/api/cars)
 
 1. Create a new car
-   - Endpoint: POST /api/cars
-  Request Body:
+   - Endpoint: (POST) /api/cars
 
 ```json
+Request Body:
 {
   "make": "Toyota",
   "model": "Corolla",
