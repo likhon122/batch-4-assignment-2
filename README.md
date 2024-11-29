@@ -71,7 +71,7 @@ PORT=3000
 
            - Response:
 
-           ```json
+          ```json
            {
               "message": "Car created Successfully",
               "success": true,
@@ -93,6 +93,7 @@ PORT=3000
 
       ```
 
+      ```
 
 2.  Get all cars
 
@@ -149,6 +150,8 @@ PORT=3000
             }
 
             }
+
+    ```
 
     ```
 
