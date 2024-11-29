@@ -123,11 +123,11 @@ PORT=3000
 
 3.  Get a single car by ID
 
-        - Endpoint: GET /api/cars/:carId
+   - Endpoint: GET /api/cars/:carId
 
-          - Response:
+     - Response:
 
-          ```json
+     ```json
           {
             "message": "Car retrieved successfully",
             "success": true,
@@ -148,9 +148,7 @@ PORT=3000
 
             }
 
-    ```
-
-    ```
+      ```
 
 4.  Update a car by ID
 
