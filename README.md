@@ -57,21 +57,17 @@ PORT=3000
 1.  Create a new car
 
     - Endpoint: (POST) /api/cars
-
            - Request Body:
-
            ```json
-           {
-             "make": "Toyota",
-             "model": "Corolla",
-             "year": 2020,
-             "price": 20000
-           }
+             {
+               "make": "Toyota",
+               "model": "Corolla",
+               "year": 2020,
+               "price": 20000
+             }
            ```
-
            - Response:
-
-          ```json
+      ```json
            {
               "message": "Car created Successfully",
               "success": true,
@@ -90,8 +86,6 @@ PORT=3000
                 "__v": 0
               }
             }
-
-      ```
 
       ```
 
