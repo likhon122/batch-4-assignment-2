@@ -58,15 +58,18 @@ PORT=3000
 
     - Endpoint: (POST) /api/cars
            - Request Body:
-           ```json
+      
+      ```json
+      
              {
                "make": "Toyota",
                "model": "Corolla",
                "year": 2020,
                "price": 20000
              }
-           ```
-           - Response:
+    
+      ```
+      - Response:
       ```json
            {
               "message": "Car created Successfully",
