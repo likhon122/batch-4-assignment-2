@@ -124,31 +124,30 @@ PORT=3000
 3.  Get a single car by ID
 
    - Endpoint: GET /api/cars/:carId
+       - Response:
 
-     - Response:
-
-     ```json
-          {
-            "message": "Car retrieved successfully",
-            "success": true,
-            "data": {
-                "_id": "6748599ca6a54826b7d696b5",
-                "brand": "Toyota",
-                "model": "Camry",
-                "year": 2024,
-                "price": 25000,
-                "category": "Sedan",
-                "description": "A reliable family sedan with modern features.",
-                "quantity": 50,
-                "inStock": true,
-                "createdAt": "2024-11-28T11:53:00.573Z",
-                "updatedAt": "2024-11-28T11:53:00.573Z",
-                "__v": 0
-            }
-
-            }
-
-      ```
+         ```json
+              {
+                "message": "Car retrieved successfully",
+                "success": true,
+                "data": {
+                    "_id": "6748599ca6a54826b7d696b5",
+                    "brand": "Toyota",
+                    "model": "Camry",
+                    "year": 2024,
+                    "price": 25000,
+                    "category": "Sedan",
+                    "description": "A reliable family sedan with modern features.",
+                    "quantity": 50,
+                    "inStock": true,
+                    "createdAt": "2024-11-28T11:53:00.573Z",
+                    "updatedAt": "2024-11-28T11:53:00.573Z",
+                    "__v": 0
+                }
+    
+                }
+    
+          ```
 
 4.  Update a car by ID
 
@@ -189,14 +188,14 @@ PORT=3000
 
 5.  Delete a car by ID
     - Endpoint: DELETE /api/cars/:carId
-    - Response
-    ```json
-    {
-      "message": "Car deleted successfully",
-      "success": true,
-      "data": {}
-    }
-    ```
+      - Response
+      ```json
+      {
+        "message": "Car deleted successfully",
+        "success": true,
+        "data": {}
+      }
+      ```
 
 ### Order-Routes (/api/orders)
 
@@ -214,24 +213,24 @@ PORT=3000
         }
         ```
 
-    - Response:
+      - Response:
 
-      ```json
-      {
-        "message": "Order created successfully",
-        "success": true,
-        "data": {
-          "email": "customer@example.com",
-          "car": "674984c07b85c724cfb23c73",
-          "quantity": 1,
-          "totalPrice": 25000,
-          "_id": "674984c87b85c724cfb23c76",
-          "createdAt": "2024-11-29T09:09:28.929Z",
-          "updatedAt": "2024-11-29T09:09:28.929Z",
-          "__v": 0
+        ```json
+        {
+          "message": "Order created successfully",
+          "success": true,
+          "data": {
+            "email": "customer@example.com",
+            "car": "674984c07b85c724cfb23c73",
+            "quantity": 1,
+            "totalPrice": 25000,
+            "_id": "674984c87b85c724cfb23c76",
+            "createdAt": "2024-11-29T09:09:28.929Z",
+            "updatedAt": "2024-11-29T09:09:28.929Z",
+            "__v": 0
+          }
         }
-      }
-      ```
+        ```
 
 2.  Get total revenue
 
