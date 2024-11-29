@@ -36,6 +36,8 @@ npm run dev
 npm run build
 ```
 
+`Alternatively, for development mode with live reloading, use npm run dev.`
+
 ## Environment-Variables
 
 1. Set up environment variables in a `.env` file:
@@ -248,9 +250,10 @@ PORT=3000
 
 ## Live-Link
 
-- ### Live - [Live Link](http://localhost:4000)
+- ### Live - [Live Link](https://batch-4-assignmnet-2.vercel.app)
 
-`Alternatively, for development mode with live reloading, use npm run dev.`
+- ### Live-Vide-Explanation - [Live Video Explanation](https://drive.google.com/file/d/1zPquRqDYmQCY2yo9x6xZLvoZrmxnAcuu/view?usp=sharing)
+
 
 ## Technologies
 

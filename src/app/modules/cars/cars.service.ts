@@ -21,7 +21,7 @@ const getAllCarsService = async (searchTerm: string) => {
       // make a case-insensitive regex search
       const searchRegex = new RegExp(searchTerm, "i");
       filter.$or = [
-        { make: searchRegex },
+        { brand: searchRegex },
         { model: searchRegex },
         { category: searchRegex }
       ];

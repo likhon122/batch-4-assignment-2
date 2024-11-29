@@ -1,6 +1,6 @@
 {
-  "include": ["src"], // which files to compile
-  "exclude": ["node_modules"], // which files to skip
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
