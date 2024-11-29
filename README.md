@@ -93,6 +93,7 @@ PORT=3000
 
       ```
 
+
 2.  Get all cars
 
     - Endpoint: GET /api/cars
