@@ -71,7 +71,7 @@ PORT=3000
       "category": "Sedan",
       "description": "A reliable family sedan with modern features.",
       "quantity": 100,
-      "inStock": false
+      "inStock": true
       }
     
       ```
@@ -87,8 +87,8 @@ PORT=3000
                 "price": 25000,
                 "category": "Sedan",
                 "description": "A reliable family sedan with modern features.",
-                "quantity": 0,
-                "inStock": false,
+                "quantity": 100,
+                "inStock": true,
                 "_id": "6749829e7b85c724cfb23c67",
                 "createdAt": "2024-11-29T09:00:14.876Z",
                 "updatedAt": "2024-11-29T09:00:14.876Z",
