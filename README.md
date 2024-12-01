@@ -64,11 +64,15 @@ PORT=3000
       ```json
       
              {
-               "make": "Toyota",
-               "model": "Corolla",
-               "year": 2020,
-               "price": 20000
-             }
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2024,
+      "price": 25000,
+      "category": "Sedan",
+      "description": "A reliable family sedan with modern features.",
+      "quantity": 100,
+      "inStock": false
+      }
     
       ```
       - Response:
