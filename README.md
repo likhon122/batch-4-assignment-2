@@ -178,9 +178,9 @@ PORT=3000
           "data": {
             "_id": "6748599ca6a54826b7d696b5",
             "brand": "Toyota",
-            "model": "Camry",
-            "year": 2024,
-            "price": 27000,
+            "model": "Corolla",
+            "year": 2021,
+            "price": 22000,
             "category": "Sedan",
             "description": "A reliable family sedan with modern features.",
             "quantity": 30,
@@ -228,7 +228,7 @@ PORT=3000
           "data": {
             "email": "customer@example.com",
             "car": "674984c07b85c724cfb23c73",
-            "quantity": 1,
+            "quantity": 2,
             "totalPrice": 25000,
             "_id": "674984c87b85c724cfb23c76",
             "createdAt": "2024-11-29T09:09:28.929Z",
