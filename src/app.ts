@@ -35,23 +35,46 @@ app.all("*", (req: Request, res: Response) => {
   });
 });
 
-// Error handler
+// Global Error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   // Handle ZodError (validation error)
   if (err instanceof ZodError) {
-    const zodErrors = err.errors.map((e: any) => ({
-      path: e.path.join("."),
-      message: e.message
-    }));
+    const formattedErrors: Record<string, any> = {};
 
+    err.errors.forEach((e: any) => {
+      const path = e.path.join(".");
+      formattedErrors[path] = {
+        message: e.message,
+        name: "ValidationError",
+        properties: {
+          message: e.code,
+          expected: e.expected,
+          received: e.received
+        },
+        kind: e.code,
+        path: path,
+        value: e.received
+      };
+    });
+
+    // Get the stack trace and convert it to the desired format
+    const stack = (num: number) => {
+      return (
+        (err.stack && err.stack.split("\n")[num])?.trim() ||
+        "Error: Something went wrong"
+      );
+    };
+    const stackLines = `Error: something went wrong: ${stack(3)} at ...`;
+
+    // Send the structured error response
     res.status(400).json({
-      message: "Validation error",
+      message: "Validation failed",
       success: false,
       error: {
-        name: "ZodError",
-        errors: zodErrors
+        name: "ValidationError",
+        errors: formattedErrors
       },
-      stack: "No stack trace available"
+      stack: stackLines
     });
     return;
   }
