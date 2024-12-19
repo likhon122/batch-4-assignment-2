@@ -91,7 +91,7 @@ PORT=3000
                 "inStock": true,
                 "_id": "6749829e7b85c724cfb23c67",
                 "createdAt": "2024-11-29T09:00:14.876Z",
-                "updatedAt": "2024-11-29T09:00:14.876Z",// This is commot
+                "updatedAt": "2024-11-29T09:00:14.876Z",
                 "__v": 0
               }
             }
